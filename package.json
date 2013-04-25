@@ -10,6 +10,7 @@
     "coffee-script": "1.6.2",
     "marked": "*",
     "jade": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "nib": "*"
   }
 }

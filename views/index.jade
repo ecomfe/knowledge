@@ -1,5 +1,11 @@
 extends layout
 
+block meta
+  title= title
+
+block styles
+  link(rel="stylesheet", href="/css/home.css")
+
 block content
   h1= title
   p Welcome to #{title}

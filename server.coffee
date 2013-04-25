@@ -1,8 +1,18 @@
 express = require 'express'
-routes = require './routes'
 http = require 'http'
 path = require 'path'
+stylus = require 'stylus'
+nib = require 'nib'
 
+# template compile
+compile = (str, path) ->
+  stylus(str)
+  .set('filename', path)
+  .set('compress', true)
+  .use(nib())
+  .import('nib')
+
+# create express
 app = express()
 
 # all environments
@@ -14,7 +24,9 @@ app.use express.logger('dev')
 app.use express.bodyParser()
 app.use express.methodOverride()
 app.use app.router
-app.use require('stylus').middleware("#{__dirname}/public")
+app.use stylus.middleware
+  src: "#{__dirname}/public"
+  compile: compile
 app.use express.static(path.join(__dirname, 'public'))
 
 # development only
