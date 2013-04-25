@@ -15,7 +15,7 @@ Point = (point) ->
 
 Point::getSync = (id) ->
   try
-    str = fs.readFileSync("#{__dirname}/../points/#{id}.coffee").toString()
+    str = fs.readFileSync("#{__dirname}/../data/points/#{id}.coffee").toString()
     point = coffee.eval str, sandbox: true
   catch e
     console.log e

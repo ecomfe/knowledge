@@ -1,7 +1,6 @@
 id: "css"
 title: "CSS"
 parent: "languages"
-core: yes
 dependence: [
   "html"
 ]
