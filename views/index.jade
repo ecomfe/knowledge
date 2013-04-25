@@ -7,5 +7,23 @@ block styles
   link(rel="stylesheet", href="/css/home.css")
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header.bck.light.padding
+    .row
+      .column_4
+        img.logo.on-left(src="/img/logo.png")
+      nav.column_8.text.right(data-tuktuk="menu")
+        a#nav-menu-home(href="/")
+          span.icon.home
+          | Home
+        a#nav-menu-base(href="/base")
+          span.icon.cloud
+          | Base
+          small (0)
+        a#nav-menu-graph(href="#")
+          span.icon.grid-large
+          | Dashboard
+        a#nav-menu-github(href="https://github.com/ecomfe/knowledge")
+          span.icon.github-alt
+          | Github
+
+block script
