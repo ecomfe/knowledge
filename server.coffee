@@ -3,6 +3,7 @@ http = require 'http'
 path = require 'path'
 stylus = require 'stylus'
 nib = require 'nib'
+marked = require 'marked'
 
 # template compile
 compile = (str, path) ->
@@ -14,6 +15,13 @@ compile = (str, path) ->
 
 # create express
 app = express()
+
+# init markdown
+marked.setOptions
+  gfm: true
+  tables: true
+  breaks: true
+app.locals.marked = marked
 
 # all environments
 app.set 'port', process.env.PORT or 8888
