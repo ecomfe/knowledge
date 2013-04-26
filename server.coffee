@@ -5,6 +5,9 @@ stylus = require 'stylus'
 nib = require 'nib'
 marked = require 'marked'
 
+# build data indexes
+require "#{__dirname}/indexes"
+
 # template compile
 compile = (str, path) ->
   stylus(str)
@@ -42,7 +45,7 @@ if 'development' == app.get('env')
   app.use express.errorHandler()
 
 # init routes
-require('./routes/index.coffee')(app)
+require("#{__dirname}/routes/index.coffee")(app)
 
 http.createServer(app).listen app.get('port'), ->
   console.log 'Listening on port ' + app.get('port')
