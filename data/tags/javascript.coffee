@@ -1,5 +1,6 @@
 id: "javascript"
 title: "JavaScript"
+parent: "language"
 desc: "前端核心语言。"
 reference:
   "ES5": "http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf"

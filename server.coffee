@@ -6,7 +6,7 @@ nib = require 'nib'
 marked = require 'marked'
 
 # build data indexes
-require "#{__dirname}/indexes"
+indexes = require "#{__dirname}/indexes"
 
 # template compile
 compile = (str, path) ->
@@ -39,6 +39,8 @@ app.use stylus.middleware
   src: "#{__dirname}/public"
   compile: compile
 app.use express.static(path.join(__dirname, 'public'))
+
+app.locals indexes
 
 # development only
 if 'development' == app.get('env')

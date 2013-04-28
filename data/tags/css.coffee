@@ -1,5 +1,6 @@
 id: "css"
 title: "CSS"
+parent: "language"
 desc: "级联样式表（Cascading Style Sheets），前端核心语言。"
 reference:
   "CSS 2.1": "http://www.w3.org/TR/CSS2/"

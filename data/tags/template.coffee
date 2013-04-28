@@ -1,5 +1,6 @@
 id: "template"
 title: "模板引擎"
+parent: "function"
 desc: "模板引擎是为了使用户界面与业务数据（内容）分离而产生的，它可以生成特定格式的文档。"
 reference:
   "开源中国：模板引擎": "http://www.oschina.net/project/tag/136/template-engine"

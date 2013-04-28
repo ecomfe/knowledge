@@ -1,7 +1,7 @@
 id: "lesscss"
 title: "LESS"
 language: [ "css", "javascript" ]
-category: [ "css-preprocessor" ]
+function: [ "css-preprocessor" ]
 relevance: [ "stylus", "sass" ]
 desc: """
 LESS是一个开源的动态CSS语言(CSS预处理器)。
