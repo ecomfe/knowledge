@@ -29,18 +29,18 @@ block content
     //- tag title
     section.bck.theme.text.left.book
       .row
-        .column_9.padding
+        .column_9.padding-top.padding-bottom.margin-none
           h3.color.white(id="#tag-#{tag.id}")= tag.title
-        .column_3.padding.text.right
+        .column_3.padding-top.padding-bottom.text.right.hide-phone
           h3
             a(href="#tag-#{tag.id}").color.white.icon.paper-clip
     .bck.light
       .row
-        .tag-content.column_12.padding
+        .tag-content.column_12.margin-none.padding-top.padding-bottom
           if tag.desc
-            .desc= tag.desc
+            .desc!= marked(tag.desc)
           if tag.reference
-            h5.color.theme.text.italic Reference
+            h5.text.italic Reference
             ul.square
               each refUrl, refTitle in tag.reference
                 li
@@ -48,16 +48,19 @@ block content
                     = refTitle
                     span.icon.external-link
     if tag.points
-      each pointId in tag.points
-        - var point = points[pointId]
-        .bck.lightest
-          .row
-            .point-content.column_12.padding
-              h3.text.book= point.title
+      .points-container
+        each pointId in tag.points
+          - var point = points[pointId]
+          .bck.lightest
+            .row
+              .point-content.margin-none.column_12.padding-top.padding-bottom
+                h4.margin-none.color.theme= point.title
+                if point.desc
+                  .desc!= marked(point.desc)
     else
       .bck.lightest
         .row
-          .column_12.padding
+          .column_12.margin-none.padding-top.padding-bottom
             small
               | 注：
               code.color.theme #{tag.id}
