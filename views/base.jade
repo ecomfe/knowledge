@@ -1,0 +1,30 @@
+extends layout
+
+block meta
+  title Base
+
+block styles
+  link(rel="stylesheet", href="/css/base.css")
+
+block content
+  include inc/header
+  - var curCategoryId = null
+  include inc/category-menu
+  section.padding-top.padding-bottom
+    .row
+      each cate in categories
+        .column_4
+          .category.padding.bck.theme
+            h4
+              a(href="/category/#{cate.id}").color.white
+                span.icon.tags
+                |  #{cate.title}
+            .desc.margin-top= cate.desc
+          .tags.padding.bck.light
+            each curTag in cate.tags
+              - var tag = tags[curTag]
+              a(href="/tag/#{tag.id}")
+                span.icon.tag
+                |  #{tag.title}
+  include inc/footer
+block script

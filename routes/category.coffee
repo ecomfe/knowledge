@@ -1,4 +1,4 @@
-# Tag Controller
+# Category Controller
 
 module.exports = (req, res) ->
   categories = req.app.locals.categories

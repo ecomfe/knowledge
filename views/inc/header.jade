@@ -1,18 +1,19 @@
 header.bck.light.padding-top.padding-bottom
   .row
     .column_4
-      img.logo.on-left(src="/img/logo.png")
+      a(href="/")
+        img.logo.on-left(src="/img/logo.png")
     nav.column_8.text.right(data-tuktuk="menu")
-      a#nav-menu-home(href="/")
-        span.icon.home
-        | Home
+      //- a#nav-menu-home(href="/")
+      //-   span.icon.home
+      //-   | Home
       a#nav-menu-base(href="/base")
         span.icon.cloud
         | Base
         small (#{points_count})
-      a#nav-menu-graph(href="/dashboard")
-        span.icon.grid-large
-        | Dashboard
+      //- a#nav-menu-graph(href="/dashboard")
+      //-   span.icon.grid-large
+      //-   | Dashboard
       a#nav-menu-github(href="https://github.com/ecomfe/knowledge")
         span.icon.github-alt
         | Github
