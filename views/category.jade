@@ -23,10 +23,11 @@ block content
     section.bck.theme.text.left.book
       .row
         .column_9.padding-top.padding-bottom.margin-none
-          h3.color.white(id="#tag-#{tag.id}")= tag.title
+          h3.color.white(id="#tag-#{tag.id}")
+            = tag.title
         .column_3.padding-top.padding-bottom.text.right.hide-phone
           h3
-            a(href="#tag-#{tag.id}").color.white.icon.paper-clip
+            a(href="/tag/#{tag.id}").color.white.icon.link
     .bck.light
       .row
         .tag-content.column_12.margin-none.padding-top.padding-bottom
@@ -47,7 +48,8 @@ block content
           .bck.lightest
             .row
               .point-content.margin-none.column_12.padding-top.padding-bottom
-                h4.margin-none.color.theme= point.title
+                h4.margin-none
+                  a(href="/p/#{point.id}").color.theme= point.title
                 if point.desc
                   .desc!= marked(point.desc)
                 if point.reference

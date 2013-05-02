@@ -1,0 +1,14 @@
+extends layout
+
+block meta
+  title #{point.title} - Point
+
+block styles
+  link(rel="stylesheet", href="/css/point.css")
+
+block content
+  include inc/header
+  - var curCategoryId = null
+  include inc/category-menu
+  include inc/footer
+block script

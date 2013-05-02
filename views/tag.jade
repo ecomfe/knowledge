@@ -8,6 +8,15 @@ block styles
 
 block content
   include inc/header
+  - var curCategoryId = tag.parent
+  include inc/category-menu
+  section.padding.bck.lightest.text.center.book
+    .row
+      .column_12
+        h2.color.theme= tag.title
+  section.padding.text.left
+    .row
+      .column_12
   include inc/footer
 
 block scripts
