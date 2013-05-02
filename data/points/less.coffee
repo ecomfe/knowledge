@@ -1,8 +1,8 @@
-id: "lesscss"
+id: "less"
 title: "LESS"
-language: [ "css", "javascript" ]
+language: [ "less" ]
 function: [ "css-preprocessor" ]
-relevance: [ "stylus", "sass" ]
+relevance: [ "stylus", "sass", "css", "javascript" ]
 desc: """
 LESS是一个开源的动态CSS语言(CSS预处理器)。
 LESS的当前版本使用JavaScript实现的，它可以在浏览器端运行，也可以在服务端运行。

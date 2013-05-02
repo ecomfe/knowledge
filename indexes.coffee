@@ -48,11 +48,11 @@ addTagPoints = ->
           indexes.tags[pointTag].points.push pointId
 
 
-initPointsCount = ->
+getObjectCount = (obj) ->
   count = 0
-  for key, value of indexes.points
+  for key, value of obj
     count++
-  indexes.points_count = count
+  count
 
 
 # 将多个.coffee文件中的Object合并为以Object.id为key的大Object
@@ -81,7 +81,8 @@ try
   addCategoryTags()
   addTagPoints()
   # init count
-  initPointsCount()
+  indexes.points_count = getObjectCount indexes.points
+  indexes.tags_count = getObjectCount indexes.tags
 catch err
   console.error "建立索引出错！"
   throw err

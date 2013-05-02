@@ -28,19 +28,20 @@ block content
         .column_3.padding-top.padding-bottom.text.right.hide-phone
           h3
             a(href="/tag/#{tag.id}").color.white.icon.link
-    .bck.light
-      .row
-        .tag-content.column_12.margin-none.padding-top.padding-bottom
-          if tag.desc
-            .desc!= marked(tag.desc)
-          if tag.reference
-            h5.text.italic 参考资料
-            ul.square
-              each refUrl, refTitle in tag.reference
-                li
-                  a(href=refUrl, target="_blank")
-                    = refTitle
-                    span.icon.external-link
+    if tag.desc || tag.reference
+      .bck.light
+        .row
+          .tag-content.column_12.margin-none.padding-top.padding-bottom
+            if tag.desc
+              .desc!= marked(tag.desc)
+            if tag.reference
+              h5.text.italic 参考资料
+              ul.square
+                each refUrl, refTitle in tag.reference
+                  li
+                    a(href=refUrl, target="_blank")
+                      = refTitle
+                      span.icon.external-link
     if tag.points
       .points-container
         each pointId in tag.points
