@@ -50,9 +50,16 @@ block content
             .row
               .point-content.margin-none.column_12.padding-top.padding-bottom
                 h4.margin-none
-                  a(href="/p/#{point.id}").color.theme= point.title
+                  a(href="/p/#{point.id}", id="point-#{point.id}").color.theme= point.title
                 if point.desc
                   .desc!= marked(point.desc)
+                if point.relevance
+                  h5.text.italic 相关知识点
+                  .links-container
+                    each relId in point.relevance
+                      a(href="/p/#{relId}")
+                        span.icon.tag
+                        = relId
                 if point.reference
                   h5.text.italic 参考资料
                   ul.square
