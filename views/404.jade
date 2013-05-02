@@ -1,1 +1,17 @@
-h1 神马都找不到！
+extends layout
+
+block meta
+  title 404: Page Not Found
+
+block content
+  include inc/header
+  section.padding.text.center
+    .row
+      .column_12
+        img(src="/img/404.jpg", alt="页面不存在")
+        h5.margin-top 如果你觉得这个页面应该存在，请去fork我们的Github，提交pull request
+        h5.margin-top
+          | 现在还是 
+          a(href="/").color.theme 回首页
+          |  吧
+  include inc/footer
