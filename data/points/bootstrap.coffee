@@ -2,7 +2,7 @@ id: "bootstrap"
 title: "Bootstrap"
 language: [ "css", "javascript", "html" ]
 function: [ "layout-framework" ]
-theory: [ "grid-design" ]
+theory: [ "grid-design", "responsive-layout" ]
 relevance: [ "less", "jquery" ]
 desc: "Bootstrap是一款快速开发Web应用程序的前端工具包。"
 reference:
