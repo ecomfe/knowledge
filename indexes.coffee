@@ -4,6 +4,10 @@ coffee = require "coffee-script"
 
 indexes = {}
 
+# 初始化配置
+initSettings = ->
+  indexes.app_name = "前端知识库"
+
 # 初始化知识点
 initPoints = ->
   pointPath = "#{__dirname}/data/points"
@@ -74,6 +78,7 @@ getObjectByPath= (filePath) ->
 try
   console.log "为数据建立索引..."
   # init
+  initSettings()
   initPoints()
   initTags()
   initCategories()

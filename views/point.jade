@@ -1,7 +1,7 @@
 extends layout
 
 block meta
-  title #{point.title} - Point
+  title #{point.title} - #{app_name}
 
 block styles
   link(rel="stylesheet", href="/css/point.css")
@@ -10,5 +10,43 @@ block content
   include inc/header
   - var curCategoryId = null
   include inc/category-menu
+  section.padding.text.center
+    .row
+      .column_12
+        h1.color.theme= point.title
+  section.padding-bottom.text.left
+    .row
+      .entry_container.column_8
+        if point.desc
+          h5.text.color.theme 简介
+          .entry_content.desc!= marked(point.desc)
+      .ext_info.column_4.padding.bck.light
+        h5.text.color.theme 标签
+        ul.square
+          each cate in categories
+            - var curTags = point[cate.id]
+            if curTags
+              each curTagId in curTags
+                - var curTag = tags[curTagId]
+                if curTag
+                  li
+                    a(href="/tag/#{curTag.id}")= curTag.title
+                    small (#{cate.title})
+        if point.reference
+          h5.text.color.theme 参考资料
+          ul.square
+            each refUrl, refTitle in point.reference
+              li
+                a(href=refUrl, target="_blank")
+                  = refTitle
+                  span.icon.external-link
+        if point.relevance
+          h5.text.color.theme 相关知识点
+          ul.square
+            each relId in point.relevance
+              - var relPoint = points[relId]
+              if relPoint
+                li
+                  a(href="/p/#{relPoint.id}")= relPoint.title
   include inc/footer
 block script

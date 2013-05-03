@@ -1,7 +1,7 @@
 extends layout
 
 block meta
-  title Tag
+  title #{tag.title} - #{app_name}
 
 block styles
   link(rel="stylesheet", href="/css/tag.css")
@@ -10,13 +10,18 @@ block content
   include inc/header
   - var curCategoryId = tag.parent
   include inc/category-menu
-  section.padding.bck.lightest.text.center.book
+  section.padding.bck.lightest.text.center
     .row
       .column_12
         h2.color.theme= tag.title
-  section.padding.text.left
-    .row
-      .column_12
+  if tag.points
+    each pointId in tag.points
+      - var point = points[pointId]
+      section.bck.light.text.left
+        .row
+          .column_12.padding-top.padding-bottom.margin-none
+            h3
+              a(href="/p/#{point.id}").color.theme= point.title
   include inc/footer
 
 block scripts

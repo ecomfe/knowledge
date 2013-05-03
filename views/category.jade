@@ -1,7 +1,7 @@
 extends layout
 
 block meta
-  title #{curCategory.title} - Category
+  title #{curCategory.title} - #{app_name}
 
 block styles
   link(rel="stylesheet", href="/css/category.css")
@@ -22,9 +22,9 @@ block content
     //- tag title
     section.bck.theme.text.left.book
       .row
-        .column_9.padding-top.padding-bottom.margin-none
+        .column_9.padding-top.padding-bottom.margin-top-none
           h3.color.white(id="#tag-#{tag.id}")
-            = tag.title
+            a(href="/tag/#{tag.id}").color.white= tag.title
         .column_3.padding-top.padding-bottom.text.right.hide-phone
           h3
             a(href="/tag/#{tag.id}").color.white.icon.link
