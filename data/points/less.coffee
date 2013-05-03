@@ -2,6 +2,7 @@ id: "less"
 title: "LESS"
 language: [ "less" ]
 function: [ "css-preprocessor" ]
+theory: [ "color-space" ]
 relevance: [ "stylus", "sass", "css", "javascript" ]
 desc: """
 LESS是一个开源的动态CSS语言(CSS预处理器)。
