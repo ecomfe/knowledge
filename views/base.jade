@@ -14,17 +14,20 @@ block content
     .row
       each cate in categories
         .column_4
-          .category.padding.bck.theme
+          .category.padding
             h4
-              a(href="/category/#{cate.id}").color.white
+              a(href="/category/#{cate.id}").color.theme
                 span.icon.tags
                 |  #{cate.title}
-            .desc.margin-top= cate.desc
-          .tags.padding.bck.light
+            .desc= cate.desc
+          dl.tags.padding.bck.light
             each curTag in cate.tags
               - var tag = tags[curTag]
-              a(href="/tag/#{tag.id}")
-                span.icon.tag
-                |  #{tag.title}
+              dd
+                a(href="/tag/#{tag.id}")
+                  span.icon.tag
+                  | #{tag.title}
+                  if tag.points && tag.points.length > 0
+                    small (#{tag.points.length})
   include inc/footer
 block script
