@@ -50,7 +50,7 @@ block content
             .row
               .point-content.margin-none.column_12.padding-top.padding-bottom
                 h4.margin-none
-                  a(href="/p/#{point.id}", id="point-#{point.id}").color.theme= point.title
+                  a(href="/p/#{point.id}").color.theme= point.title
                 if point.desc
                   .desc!= marked(point.desc)
                 if point.relevance
