@@ -44,7 +44,7 @@ block content
         .column_4.padding.bck.light.text.left
           .tag-content
             if tag.desc
-              .desc.margin-bottom!= marked(tag.desc)
+              .desc.margin-bottom.margin-top!= marked(tag.desc)
             if tag.reference
               h5.text.color.theme 参考资料
               ul.square
