@@ -1,5 +1,5 @@
 id: "edp"
-title: "EDP"
+title: "EDP(Ecomfe Develop Platform)"
 language: [ "javascript" ]
 function: [ "package-manager", "debug-tools", "build-tools" ]
 relevance: [ "npm", "bower" ]

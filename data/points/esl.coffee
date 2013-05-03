@@ -1,5 +1,5 @@
 id: "esl"
-title: "ESL (Enterprise Standard Loader)"
+title: "ESL(Enterprise Standard Loader)"
 theory: [ "amd" ]
 function: [ "module-loader" ]
 relevance: [ "requirejs", "seajs" ]
