@@ -14,14 +14,46 @@ block content
     .row
       .column_12
         h2.color.theme= tag.title
-  if tag.points
-    each pointId in tag.points
-      - var point = points[pointId]
-      section.bck.light.text.left
-        .row
-          .column_12.padding-top.padding-bottom.margin-none
-            h3
+  section.text.left
+    .row
+      .column_8
+        if tag.points
+          each pointId in tag.points
+            - var point = points[pointId]
+            h3.padding-top
               a(href="/p/#{point.id}").color.theme= point.title
+            .point_content
+              if point.desc
+                .desc!= marked(point.desc)
+              if point.relevance
+                h5.text.italic 相关知识点
+                .links-container
+                  each relId in point.relevance
+                    a(href="/p/#{relId}")
+                      span.icon.tag
+                      = relId
+              if point.reference
+                h5.text.italic 参考资料
+                ul.square
+                  each refUrl, refTitle in point.reference
+                    li
+                      a(href=refUrl, target="_blank")
+                        = refTitle
+                        span.icon.external-link
+      if tag.desc || tag.reference
+        .column_4.padding.bck.light.text.left
+          .tag-content
+            if tag.desc
+              .desc.margin-bottom!= marked(tag.desc)
+            if tag.reference
+              h5.text.color.theme 参考资料
+              ul.square
+                each refUrl, refTitle in tag.reference
+                  li
+                    a(href=refUrl, target="_blank")
+                      = refTitle
+                      span.icon.external-link
+
   include inc/footer
 
 block scripts
