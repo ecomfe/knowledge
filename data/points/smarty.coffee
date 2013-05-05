@@ -2,6 +2,7 @@ id: "smarty"
 title: "Smarty"
 function: [ "template" ]
 language: [ "php" ]
+theory: [ "compiler-principle" ]
 relevance: [ "velocity" ]
 desc: "Smarty是一个使用PHP写出来的模板引擎，是目前业界最著名的PHP模板引擎之一。"
 reference:

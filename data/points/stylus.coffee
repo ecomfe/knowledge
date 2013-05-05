@@ -1,5 +1,6 @@
 id: "stylus"
 title: "Stylus"
+theory: [ "compiler-principle" ]
 language: [ "stylus" ]
 function: [ "css-preprocessor" ]
 relevance: [ "less", "sass", "css", "javascript", "nib" ]
