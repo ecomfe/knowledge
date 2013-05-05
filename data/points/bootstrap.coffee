@@ -1,6 +1,6 @@
 id: "bootstrap"
 title: "Bootstrap"
-language: [ "css", "javascript", "html" ]
+language: [ "css", "javascript", "html", "less" ]
 function: [ "layout-framework" ]
 theory: [ "grid-design", "responsive-layout" ]
 relevance: [ "less", "jquery" ]
