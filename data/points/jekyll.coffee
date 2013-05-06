@@ -1,7 +1,7 @@
 id: "jekyll"
 title: "Jekyll"
 function: [ "doc-tools" ]
-theory: [ "markdown" ]
+language: [ "markdown", "ruby" ]
 releveance: [ "octopress" ]
 desc: "Github上最流行的静态站点生成工具。"
 reference:

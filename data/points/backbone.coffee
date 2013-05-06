@@ -1,7 +1,7 @@
 id: "backbone"
 title: "Backbone"
 function: [ "ria-framework" ]
-theory: [ "mvc" ]
+theory: [ "mvc", "restful" ]
 language: [ "javascript" ]
 relevance: [ "er", "ember-js", "underscore" ]
 desc: "一种用于开发重量级JavaScript应用的框架。"
