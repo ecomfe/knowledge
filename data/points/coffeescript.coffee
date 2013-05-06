@@ -1,6 +1,7 @@
 id: "coffeescript"
 title: "CoffeeScript"
 theory: [ "compiler-principle" ]
+function: [ "compiler" ]
 language: [ "javascript", "coffeescript" ]
 relevance: [ "node" ]
 desc: "CoffeeScript是一个最终会编译为JavaScript的小型语言。"
