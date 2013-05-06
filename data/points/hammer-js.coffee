@@ -1,6 +1,6 @@
 id: "hammer-js"
 title: "Hammer.js"
-function: [ "event-library" ]
+function: [ "event-library", "mobile-library" ]
 language: [ "javascript" ]
 desc: "一个多点触摸手势库。"
 reference:
