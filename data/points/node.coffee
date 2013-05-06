@@ -1,6 +1,6 @@
 id: "node"
 title: "Node"
-theory: [ "tcp-ip" ]
+theory: [ "tcp-ip", "commonjs" ]
 function: [ "web-server", "web-framework" ]
 language: [ "javascript" ]
 desc: """
