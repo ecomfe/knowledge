@@ -1,7 +1,5 @@
 # Point Controller
 
-Point = require '../models/point.coffee'
-
 module.exports = (req, res) ->
   id = req.params.id
   point = req.app.locals.points[id]
