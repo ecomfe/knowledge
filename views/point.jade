@@ -21,6 +21,12 @@ block content
           h5.text.color.theme 简介
           .entry_content.desc!= marked(point.desc)
       .ext_info.column_4.padding.bck.light
+        if point.homepage
+          a.button.tiny.margin-bottom.margin-right(href=point.homepage)
+            span.icon.home  官网
+        if point.github
+          a.button.tiny.margin-bottom.margin-right(href=point.github)
+            span.icon.github  Github
         h5.text.color.theme 标签
         ul.square
           each cate in categories

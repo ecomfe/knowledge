@@ -2,6 +2,7 @@ id: "sublime-text"
 title: "Sublime Text"
 function: [ "editor" ]
 relevance: [ "python" ]
+homepage: "http://www.sublimetext.com/"
 desc: "Sublime Text 是一套基于 Python 的跨平台文字编辑器。"
 reference:
   "Sublime Text 手册": "http://docs.sublimetext.tw/"

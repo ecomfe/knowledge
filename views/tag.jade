@@ -20,9 +20,15 @@ block content
         if tag.points
           each pointId in tag.points
             - var point = points[pointId]
-            h3.padding-top
+            h3.point_title.padding-top
               a(href="/p/#{point.id}").color.theme= point.title
             .point_content
+              if point.homepage
+                a.button.tiny.margin-bottom.margin-right(href=point.homepage)
+                  span.icon.home  官网
+              if point.github
+                a.button.tiny.margin-bottom.margin-right(href=point.github)
+                  span.icon.github  Github
               if point.desc
                 .desc!= marked(point.desc)
               if point.relevance
