@@ -2,6 +2,7 @@ id: "underscore"
 title: "Underscore"
 function: [ "base-library" ]
 language: [ "javascript" ]
+theory: [ "functional" ]
 relevance: [ "jquery", "sugar" ]
 homepage: "http://underscorejs.org/"
 github: "https://github.com/documentcloud/underscore"
