@@ -66,8 +66,11 @@ getObjectByPath= (filePath) ->
   for file in files
     if path.extname(file).toLowerCase() is '.coffee'
       filename = "#{filePath}/#{file}"
-      str = fs.readFileSync(filename).toString()
-      obj = coffee.eval str, sandbox: true
+      try
+        str = fs.readFileSync(filename).toString()
+        obj = coffee.eval str, sandbox: true
+      catch err
+        console.error "解析出错：#{filename}"
       if obj.id && obj.id == file.replace('.coffee', '')
         retObj[obj.id] = obj
       else
