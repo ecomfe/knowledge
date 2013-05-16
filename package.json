@@ -1,6 +1,12 @@
 {
   "name": "knowledge",
   "version": "0.1.1",
+  "description": "Front-end knowledge hierarchy (zh-CN)",
+  "keywords": [
+    "ecomfe",
+    "knowledge",
+    "baidu"
+  ],
   "scripts": {
     "start": "node app.js"
   },
