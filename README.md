@@ -1,8 +1,7 @@
 前端知识体系
 ===
 
-本地运行方法
----
+[![Build Status](https://travis-ci.org/ecomfe/knowledge.png)](https://travis-ci.org/ecomfe/knowledge)
 
 请先确定本地有`node`与`npm`。
 
