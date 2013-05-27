@@ -1,0 +1,104 @@
+@import "normalize.css"
+@import url("http://fonts.googleapis.com/css?family=Merriweather:700,300");
+
+cyan_light = #0FB3BF
+cyan_dark = #0B96A0
+orange_light = #EE7D5F
+orange_dark = #B76751
+grey_light = #929086
+grey_dark = #453726
+
+grey_thin1 = #CFCCC4
+grey_thin2 = #DCD9D4
+grey_thin3 = #EEEDEB
+
+aside_width = 210px
+
+body
+  color grey_dark
+  font-size 14px
+  overflow hidden
+
+header
+  clearfix()
+  color white
+  background cyan_light
+  height 60px
+  border-bottom 3px solid cyan_dark
+  min-width 920px
+  a
+    color white
+    text-decoration none
+    text-shadow 1px 1px 1px rgba(0,0,0,.2)
+  .app-title
+    width aside_width
+    border-right 1px solid cyan_dark
+    text-align center
+    float left
+    a
+      display block
+      font-weight 700
+      font-family Merriweather
+      font-size 24px
+      padding-top 2px
+      line-height 58px
+  .app-menu
+    float left
+    list-style none
+    padding 0
+    margin 0
+    li
+      float left
+      border-right 1px solid cyan_dark
+      background none
+      transition background 0.3s
+      a
+        font-family Merriweather
+        font-weight 300
+        display block
+        font-size 16px
+        line-height 25px
+        padding 20px 20px 15px
+        span
+          margin-right 6px
+      &.active
+        background cyan_dark
+      &:hover
+        transition background 0.3s
+        background cyan_dark
+  .app-search
+    float right
+    margin 12px 20px
+    background cyan_dark
+    padding 3px
+    input
+      width 190px
+      background #EEEDEB
+      transition background 0.3s
+      height 16px
+      line-height 16px
+      padding 7px 5px
+      border none
+      &:focus
+        transition background 0.3s
+        background white
+
+.container
+  aside
+    float left
+    width aside_width
+    background grey_thin3
+    border-right 1px solid grey_thin1
+    overflow-x hidden
+    overflow-y auto
+    &::-webkit-scrollbar
+      width 3px
+    &::-webkit-scrollbar-track
+      background grey_thin3
+    &::-webkit-scrollbar-thumb
+      background grey_thin1
+
+  .main
+    float right
+    text-align center
+    overflow auto
