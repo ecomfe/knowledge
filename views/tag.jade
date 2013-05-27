@@ -3,63 +3,9 @@ extends layout
 block meta
   title #{tag.title} - #{app_name}
 
-block styles
-  link(rel="stylesheet", href="/css/tag.css")
-
 block content
+  active = 'Base'
   include inc/header
-  - var curCategoryId = tag.parent
-  include inc/category-menu
-  section.padding.bck.lightest.text.center
-    .row
-      .column_12
-        h2.color.theme= tag.title
-  section.text.left
-    .row
-      .column_8
-        if tag.points
-          each pointId in tag.points
-            - var point = points[pointId]
-            h3.point_title.padding-top
-              a(href="/p/#{point.id}").color.theme= point.title
-            .point_content
-              if point.homepage
-                a.button.tiny.margin-bottom.margin-right(href=point.homepage)
-                  span.icon.home  官网
-              if point.github
-                a.button.tiny.margin-bottom.margin-right(href=point.github)
-                  span.icon.github  Github
-              if point.desc
-                .desc!= marked(point.desc)
-              if point.relevance
-                h5.text.italic 相关知识点
-                .links-container
-                  each relId in point.relevance
-                    a(href="/p/#{relId}")
-                      span.icon.tag
-                      = relId
-              if point.reference
-                h5.text.italic 参考资料
-                ul.square
-                  each refUrl, refTitle in point.reference
-                    li
-                      a(href=refUrl, target="_blank")
-                        = refTitle
-                        span.icon.external-link
-      if tag.desc || tag.reference
-        .column_4.padding.bck.light.text.left
-          .tag-content
-            if tag.desc
-              .desc.margin-bottom.margin-top!= marked(tag.desc)
-            if tag.reference
-              h5.text.color.theme 参考资料
-              ul.square
-                each refUrl, refTitle in tag.reference
-                  li
-                    a(href=refUrl, target="_blank")
-                      = refTitle
-                      span.icon.external-link
-
-  include inc/footer
-
-block scripts
+  .container
+    .main
+      h1= tag.title

@@ -1,8 +1,12 @@
+//- 定义默认值
+active = null
+
 doctype 5
 html
   include inc/head.jade
   body
-    block content
+    .wrapper
+      block content
     script(src="/js/jquery.js")
-    script(src="/js/tuktuk.js")
+    script(src="/js/master.js")
     block scripts

@@ -1,34 +1,13 @@
-mixin app-menu-item(title, url, blank, icon)
-  li(class= active == title ? 'active' : null)
-    a(href=url, target=blank)
-      if icon
-        span(class='icon-' + icon)
-      = title
+extends layout
 
-active = 'Started'
+block meta
+  title= app_name
 
-doctype 5
-html
-  head
-    meta(charset='utf-8')
-    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
-    link(rel="stylesheet", href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css")
-    link(rel="stylesheet", href="/css/common.css")
+block content
+  active = 'Started'
+  include inc/header
   body
     .wrapper
-      header
-        .app-title
-          a(href="/") Knowledge
-        ul.app-menu
-          +app-menu-item('Started', '/', null, 'flag')
-          +app-menu-item('Base', '/base', null, 'cloud')
-          +app-menu-item('Graph', '/graph', null, 'th')
-          +app-menu-item('Github', 'https://github.com/ecomfe/knowledge', '_blank', 'github-sign')
-        .app-search
-          input(type="search", placeholder="搜索知识点")
       .container
         .main
           include start.md
-
-    script(src="/js/jquery.js")
-    script(src="/js/master.js")
