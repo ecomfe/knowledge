@@ -5,7 +5,7 @@ block meta
 
 block content
   active = 'Base'
-  include inc/level-mixin
+  include inc/mixins
   include inc/header
 
   - var curCategory = categories[tag.parent]
@@ -20,6 +20,7 @@ block content
           if tag.desc
             .desc!= marked(tag.desc)
           +level(tag.level)
+          +reference(tag.reference)
         if tag.points
           each pointId in tag.points
             - var point = points[pointId]
