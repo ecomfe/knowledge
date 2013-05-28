@@ -1,7 +1,7 @@
 id: "mustache"
 title: "Mustache"
 function: [ "template" ]
-relevance: [ "handbars", "hogan-js" ]
+relevance: [ "handlebars", "hogan-js" ]
 homepage: "http://mustache.github.io/"
 desc: """
 Logic-less风格的模板引擎，前后端均可使用，支持众多语言。
