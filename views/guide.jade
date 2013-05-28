@@ -10,10 +10,14 @@ block content
     .wrapper
       .container
         .main
-          .content!= guide
+          .content.article!= guide
         aside
           .group
             .group-label Guides
             ul.group-list
               li
-                a(href="/") Getting Started
+                a(href="/") 简介
+              //- li
+              //-   a(href="/guide/start") 快速开始
+              li
+                a(href="/guide/contribute") 贡献

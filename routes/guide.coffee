@@ -1,7 +1,7 @@
 # Guide Controller
 
 module.exports = (req, res) ->
-  id = req.params.id || 'start'
+  id = req.params.id || 'intro'
   guide = req.app.locals.guides[id]
   if guide
     res.render "guide", guide: guide
