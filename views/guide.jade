@@ -1,0 +1,19 @@
+extends layout
+
+block meta
+  title= app_name
+
+block content
+  active = 'Guides'
+  include inc/header
+  body
+    .wrapper
+      .container
+        .main
+          .content!= guide
+        aside
+          .group
+            .group-label Guides
+            ul.group-list
+              li
+                a(href="/") Getting Started

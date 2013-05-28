@@ -1,0 +1,15 @@
+aside
+  - var curTagId = curTagId || null
+  each category in categories
+    .group
+      .group-label
+        span.icon-tags
+        | #{category.title}
+      ul.group-list
+        each tagId in category.tags
+          - var tag = tags[tagId]
+          li(class = curTagId === tag.id ? "active" : null)
+            a(href="/tag/#{tag.id}")
+              span.tag-name= tag.title
+              if tag.points
+                span.count (#{tag.points.length})

@@ -5,13 +5,17 @@ block meta
 
 block content
   include inc/header
-  section.padding.text.center
-    .row
-      .column_12
-        img(src="/img/404.jpg", alt="页面不存在")
-        h5.margin-top 如果你觉得这个页面应该存在，请去fork我们的Github，提交pull request
-        h5.margin-top
-          | 现在还是 
-          a(href="/").color.theme 回首页
-          |  吧
-  include inc/footer
+  body
+    .wrapper
+      .container
+        .main
+          .content
+            h1 404: Page Not Found
+            .desc
+              :markdown
+                如果你觉得这是一个`BUG`，去我们的 [Github](https://github.com/ecomfe/knowledge) 看看吧！
+
+                - 拔刀相助：`fork`我们的项目，修改并提交`pull request`
+                - 通风报信：提交`issue`并描述问题，交给我们来搞定
+
+                [返回首页](/)

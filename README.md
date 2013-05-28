@@ -1,6 +1,8 @@
 前端知识体系
 ===
 
+_主干处于开发状态，建议使用npm版本（或已打tag版本）_
+
 [![Build Status](https://travis-ci.org/ecomfe/knowledge.png)](https://travis-ci.org/ecomfe/knowledge)
 
 请先确定本地有`node`与`npm`。
