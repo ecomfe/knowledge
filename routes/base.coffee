@@ -1,2 +1,7 @@
+_ = require 'lodash'
+
 module.exports = (req, res) ->
-  res.render 'base'
+  tagIds = _.pluck(req.app.locals.tags, 'id')
+  tagIndex = _.random(0, tagIds.length - 1)
+  tagId = tagIds[tagIndex]
+  res.redirect "/tag/#{tagId}"
