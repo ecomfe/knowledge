@@ -38,6 +38,7 @@ header .app-search input:focus{-webkit-transition:background .3s;-moz-transition
 .container .main h3{font-size:18px}
 .container .main h4{font-size:16px}
 .container .main h5{font-size:14px;font-weight:700}
+.container .main hr{border-width:0 0 1px 0;border-style:solid;border-color:#eeedeb}
 .container .main a{color:#0b96a0;text-decoration:none;}
 .container .main a:hover{color:#b76751}
 .container .main .content{text-align:left;padding:20px 30px;width:720px;}
@@ -49,7 +50,7 @@ header .app-search input:focus{-webkit-transition:background .3s;-moz-transition
 .container .main .content .level .level-item dt,.container .main .content .level .level-item dd,.container .main .content .level .level-item dd p{padding:0;margin:0}
 .container .main .content .level .level-item dt{float:left;width:50px;color:#b76751}
 .container .main .content .level .level-item dd{float:left;width:670px}
-.container .main .content .tag-info,.container .main .content .point-info{border-bottom:1px solid #eeedeb;padding:10px 0 20px}
+.container .main .content .tag-info,.container .main .content .point-info{padding:10px 0 20px}
 .container .main .content .links{margin:10px 0;zoom:1;}
 .container .main .content .links:before,.container .main .content .links:after{content:"";display:table}
 .container .main .content .links:after{clear:both}

@@ -23,6 +23,7 @@ block content
         if tag.points
           each pointId in tag.points
             - var point = points[pointId]
+            hr
             .point-info
               h2
                 a(href="/p/#{point.id}")= point.title
