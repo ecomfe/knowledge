@@ -161,15 +161,27 @@ header
       text-decoration none
       &:hover
         color orange_dark
+    strong
+      color orange_dark
+      font-weight 300
+    em
+      color grey_dark
+    code
+      font-family global_mono
+      color grey_light
+      padding 0 .4em
+    pre
+      background grey_thin3
+      padding 20px
+      line-height 1.6em
+      code
+        padding 0
+        color grey_dark
 
     .content
       text-align left
       padding 20px 30px
       width 720px
-      code
-        font-family global_mono
-        color grey_light
-        padding 0 .4em
       .crumb
         color grey_light
       .level
@@ -222,6 +234,10 @@ header
             color grey_light
           .point-tag-title
             margin-right 1em
+    .article
+      h1
+        padding-bottom 0.5em
+        border-bottom 1px solid grey_thin3
 
   a.button
     float left
