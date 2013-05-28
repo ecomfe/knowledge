@@ -6,6 +6,43 @@ block meta
 block content
   active = 'Base'
   include inc/header
+  - var curCategory = categories[tag.parent]
   .container
     .main
-      h1= tag.title
+      .content
+        .crumb
+          span.icon-map-marker
+          |  #{app_name} &gt; #{active} &gt; 按 “#{curCategory.title}” 查看
+        .tag-info
+          h1= tag.title
+          if tag.desc
+            .desc!= marked(tag.desc)
+          if tag.level
+            - var levelMap = { base: "基础", advance: "进阶", senior: "资深" }
+            .level
+              each levelValue, levelIndex in tag.level
+                - var levelTitle = levelMap[levelIndex] || '要求'
+                dl.level-item
+                  dt= levelTitle
+                  dd!= marked(levelValue)
+        if tag.points
+          each pointId in tag.points
+            - var point = points[pointId]
+            .point-info
+              h2
+                a(href="/p/#{point.id}")= point.title
+              if point.desc
+                .desc!= marked(point.desc)
+              if point.github || point.homepage
+                .links
+                  if point.github
+                    a.button(href=point.github, target="_blank")
+                      span.icon-github-sign
+                      | Github
+                  if point.homepage
+                    a.button(href=point.homepage, target="_blank")
+                      span.icon-home
+                      | 官网
+
+    curTagId = tag.id
+    include inc/tag-list

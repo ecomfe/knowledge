@@ -1,5 +1,7 @@
 @import "normalize.css"
 @import url("http://fonts.googleapis.com/css?family=Merriweather:700,300");
+@import url("http://fonts.googleapis.com/css?family=Merriweather+Sans:700,400");
+@import url("http://fonts.googleapis.com/css?family=Source+Code+Pro");
 
 cyan_light = #0FB3BF
 cyan_dark = #0B96A0
@@ -14,9 +16,14 @@ grey_thin3 = #EEEDEB
 
 aside_width = 210px
 
+global_serif = Merriweather, serif
+global_sans = "Merriweather Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif
+global_mono = "Source Code Pro", "Monaco", "Courier New", monospace
+
 body
   color grey_dark
   font-size 14px
+  font-family global_sans
   overflow hidden
 
 header
@@ -38,7 +45,7 @@ header
     a
       display block
       font-weight 700
-      font-family Merriweather
+      font-family global_serif
       font-size 24px
       padding-top 2px
       line-height 58px
@@ -53,7 +60,7 @@ header
       background none
       transition background 0.3s
       a
-        font-family Merriweather
+        font-family global_serif
         font-weight 300
         display block
         font-size 16px
@@ -97,8 +104,105 @@ header
       background grey_thin3
     &::-webkit-scrollbar-thumb
       background grey_thin1
+    a
+      color grey_dark
+      text-decoration none
+      &:hover
+        color orange_dark
+    .group
+      margin 20px
+      .group-label
+        font-size 12px
+        border-bottom 1px solid grey_thin2
+        color grey_light
+        padding 3px 0
+        span
+          margin-right 5px
+      .group-list
+        padding 8px 0
+        margin 0
+        list-style none
+        li
+          padding 1px 0
+          span.count
+            padding-left 5px
+            font-size 12px
+            color grey_light
+            font-family global_mono
+          &.active .tag-name
+            font-weight 700
+            color orange_dark
 
   .main
     float right
     text-align center
     overflow auto
+    a
+      color cyan_dark
+      text-decoration none
+      &:hover
+        color orange_dark
+    .content
+      text-align left
+      padding 20px 30px
+      width 720px
+      code
+        font-family global_mono
+        color grey_light
+        padding 0 .4em
+      .crumb
+        color grey_light
+      h1, h2, h3
+        font-weight 300
+        font-family global_serif
+      h1
+        font-size 30px
+      h2
+        font-size 26px
+      .level
+        .level-item
+          clearfix()
+          dt,
+          dd,
+          dd p
+            padding 0
+            margin 0
+          dt
+            float left
+            width 50px
+            color orange_dark
+          dd
+            float left
+            width 670px
+      .tag-info,
+      .point-info
+        border-bottom 1px solid grey_thin3
+        padding 10px 0 20px
+      .links
+        margin 10px 0
+        clearfix()
+        .button
+          margin-right 15px
+
+  a.button
+    float left
+    display block
+    height 21px
+    line-height 21px
+    background cyan_light
+    border-bottom 3px solid cyan_dark
+    color white
+    border-radius 5px
+    padding 2px 10px
+    cursor pointer
+    &:hover
+      color white
+      opacity .8
+    &:active
+      background cyan_dark
+      opacity 1
+      border-bottom none
+      line-height 24px
+      height 24px
+    span
+      margin-right 5px
