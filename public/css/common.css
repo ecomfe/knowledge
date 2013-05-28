@@ -61,6 +61,10 @@ header .app-search input:focus{-webkit-transition:background .3s;-moz-transition
 .container .main .content .relevance dt.unknown em{font-size:12px;margin-left:.6em;color:#cfccc4}
 .container .main .content .relevance dd{margin:0 0 0 1.5em;}
 .container .main .content .relevance dd p{margin:.6em 0}
+.container .main .content .point-tags .point-tag{margin:5px 0;}
+.container .main .content .point-tags .point-tag span{color:#929086;margin-right:.5em}
+.container .main .content .point-tags .point-tag em{color:#929086}
+.container .main .content .point-tags .point-tag .point-tag-title{margin-right:1em}
 .container a.button{float:left;display:block;height:21px;line-height:21px;background:#0fb3bf;border-bottom:3px solid #0b96a0;color:#fff;-webkit-border-radius:5px;border-radius:5px;padding:2px 10px;cursor:pointer;}
 .container a.button:hover{color:#fff;opacity:.8;filter:alpha(opacity=80);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"}
 .container a.button:active{background:#0b96a0;opacity:1;-ms-filter:none;filter:none;border-bottom:none;line-height:24px;height:24px}

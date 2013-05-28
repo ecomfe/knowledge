@@ -28,13 +28,14 @@ block content
                 a.button(href=point.homepage, target="_blank")
                   span.icon-home
                   | 官网
-          if point.reference
-            .reference
-              h2 参考资料
-              ul
-                for refUrl, refTitle in point.reference
-                  li
-                    a(href=refUrl, target="_blank")= refTitle
+        if point.reference
+          hr
+          .reference
+            h2 参考资料
+            ul
+              for refUrl, refTitle in point.reference
+                li
+                  a(href=refUrl, target="_blank")= refTitle
         if point.relevance
           hr
           .relevance
@@ -53,6 +54,26 @@ block content
                     span.icon-tag
                     | #{relId}
                     em (未入库)
+        hr
+        .point-tags
+          h2 标签
+          .point-tags-list
+            for category in categories
+              - var tagIds = point[category.id]
+              if tagIds
+                .point-tag
+                  span.icon-tag
+                  string.point-tag-title= category.title
+                  - var tagLen = tagIds.length
+                  each tagId, index in tagIds
+                    - var tag = tags[tagId]
+                    if tag
+                      a(href="/tag/#{tag.id}")= tag.title
+                    else
+                      em= tagId
+                    if tagLen !== index + 1
+                      | , 
+
 
 
     include inc/tag-list
