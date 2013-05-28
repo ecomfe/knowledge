@@ -1,11 +1,17 @@
 {
   "name": "knowledge",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Front-end knowledge hierarchy (zh-CN)",
   "keywords": [
     "ecomfe",
     "knowledge",
     "baidu"
+  ],
+  "maintainers": [
+    {
+      "name": "Firede",
+      "email": "firede@firede.us"
+    }
   ],
   "scripts": {
     "start": "node app.js",
