@@ -32,14 +32,17 @@ header .app-search input:focus{-webkit-transition:background .3s;-moz-transition
 .container aside .group .group-list li span.count{padding-left:5px;font-size:12px;color:#929086;font-family:"Source Code Pro","Monaco","Courier New",monospace}
 .container aside .group .group-list li.active .tag-name{font-weight:700;color:#b76751}
 .container .main{float:right;text-align:center;overflow:auto;}
+.container .main h1,.container .main h2,.container .main h3{font-weight:300;font-family:Merriweather,serif}
+.container .main h1{font-size:30px}
+.container .main h2{font-size:24px}
+.container .main h3{font-size:18px}
+.container .main h4{font-size:16px}
+.container .main h5{font-size:14px;font-weight:700}
 .container .main a{color:#0b96a0;text-decoration:none;}
 .container .main a:hover{color:#b76751}
 .container .main .content{text-align:left;padding:20px 30px;width:720px;}
 .container .main .content code{font-family:"Source Code Pro","Monaco","Courier New",monospace;color:#929086;padding:0 .4em}
 .container .main .content .crumb{color:#929086}
-.container .main .content h1,.container .main .content h2,.container .main .content h3{font-weight:300;font-family:Merriweather,serif}
-.container .main .content h1{font-size:30px}
-.container .main .content h2{font-size:26px}
 .container .main .content .level .level-item{zoom:1;}
 .container .main .content .level .level-item:before,.container .main .content .level .level-item:after{content:"";display:table}
 .container .main .content .level .level-item:after{clear:both}
