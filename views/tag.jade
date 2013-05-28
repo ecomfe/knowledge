@@ -5,7 +5,9 @@ block meta
 
 block content
   active = 'Base'
+  include inc/level-mixin
   include inc/header
+
   - var curCategory = categories[tag.parent]
   .container
     .main
@@ -17,14 +19,7 @@ block content
           h1= tag.title
           if tag.desc
             .desc!= marked(tag.desc)
-          if tag.level
-            - var levelMap = { base: "基础", advance: "进阶", senior: "资深" }
-            .level
-              each levelValue, levelIndex in tag.level
-                - var levelTitle = levelMap[levelIndex] || '要求'
-                dl.level-item
-                  dt= levelTitle
-                  dd!= marked(levelValue)
+          +level(tag.level)
         if tag.points
           each pointId in tag.points
             - var point = points[pointId]
