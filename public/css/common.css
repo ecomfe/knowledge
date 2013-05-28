@@ -24,10 +24,10 @@ header .app-search input:focus{-webkit-transition:background .3s;-moz-transition
 .container aside::-webkit-scrollbar-thumb{background:#cfccc4}
 .container aside a{color:#453726;text-decoration:none;}
 .container aside a:hover{color:#b76751}
-.container aside .group{margin:20px;}
-.container aside .group .group-label{font-size:12px;border-bottom:1px solid #dcd9d4;color:#929086;padding:3px 0;}
-.container aside .group .group-label span{margin-right:5px}
-.container aside .group .group-list{padding:8px 0;margin:0;list-style:none;}
+.container aside .group{margin:20px 15px;font-size:12px;}
+.container aside .group .group-label{border-bottom:1px solid #dcd9d4;color:#929086;padding:3px 0;}
+.container aside .group .group-label span{margin-right:6px}
+.container aside .group .group-list{padding:8px 0;margin:0;margin-left:1em;list-style:none;}
 .container aside .group .group-list li{padding:1px 0;}
 .container aside .group .group-list li span.count{padding-left:5px;font-size:12px;color:#929086;font-family:"Source Code Pro","Monaco","Courier New",monospace}
 .container aside .group .group-list li.active .tag-name{font-weight:700;color:#b76751}
