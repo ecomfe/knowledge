@@ -1,0 +1,9 @@
+mixin level(level)
+  if level
+    - var levelMap = { base: "基础", advance: "进阶", senior: "资深" }
+    .level
+      each levelValue, levelIndex in level
+        - var levelTitle = levelMap[levelIndex] || '要求'
+        dl.level-item
+          dt= levelTitle
+          dd!= marked(levelValue)

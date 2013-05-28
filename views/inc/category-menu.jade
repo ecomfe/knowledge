@@ -1,8 +1,0 @@
-section.bck.color
-  .row.text.right
-    nav.category_menu.column_12.text(data-tuktuk="menu")
-      each cate in categories
-        if cate.id === curCategoryId
-          a.active(href="/category/#{cate.id}", id="#{cate.id}")= cate.title
-        else
-          a(href="/category/#{cate.id}", id="#{cate.id}")= cate.title

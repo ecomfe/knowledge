@@ -1,6 +1,7 @@
 fs = require "fs"
 path = require "path"
 coffee = require "coffee-script"
+marked = require "marked"
 
 indexes = {}
 
@@ -77,6 +78,21 @@ getObjectByPath= (filePath) ->
         console.error "没有id或id与文件名不符：#{filename}"
   return retObj
 
+# init Guides
+initGuides = ->
+  indexes.guides = {}
+  docPath = "#{__dirname}/docs"
+  files = fs.readdirSync docPath
+  for file in files
+    if path.extname(file).toLowerCase() is '.md'
+      docId = file.replace('.md', '')
+      filename = "#{docPath}/#{file}"
+      try
+        str = fs.readFileSync(filename).toString()
+        indexes.guides[docId] = marked(str)
+      catch err
+        console.log "文档解析出错：#{filename}"
+
 
 try
   console.log "为数据建立索引..."
@@ -91,6 +107,7 @@ try
   # init count
   indexes.points_count = getObjectCount indexes.points
   indexes.tags_count = getObjectCount indexes.tags
+  initGuides()
 catch err
   console.error "建立索引出错！"
   throw err

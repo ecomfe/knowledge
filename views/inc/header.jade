@@ -1,19 +1,17 @@
-header.bck.light.padding-top.padding-bottom
-  .row
-    .column_4
-      a(href="/")
-        img.logo.on-left(src="/img/logo.png")
-    nav.column_8.text.right(data-tuktuk="menu")
-      //- a#nav-menu-home(href="/")
-      //-   span.icon.home
-      //-   | Home
-      a#nav-menu-base(href="/base")
-        span.icon.cloud
-        | Base
-        small (#{points_count})
-      //- a#nav-menu-graph(href="/dashboard")
-      //-   span.icon.grid-large
-      //-   | Dashboard
-      a#nav-menu-github(href="https://github.com/ecomfe/knowledge")
-        span.icon.github-alt
-        | Github
+mixin app-menu-item(title, url, blank, icon)
+  li(class= active == title ? 'active' : null)
+    a(href=url, target=blank)
+      if icon
+        span(class='icon-' + icon)
+      = title
+
+header
+  .app-title
+    a(href="/") Knowledge
+  ul.app-menu
+    +app-menu-item('Guides', '/', null, 'bookmark')
+    +app-menu-item('Base', '/base', null, 'cloud')
+    //- +app-menu-item('Graph', '/graph', null, 'th')
+    +app-menu-item('Github', 'https://github.com/ecomfe/knowledge', '_blank', 'github-sign')
+  //- .app-search
+  //-   input(type="search", placeholder="搜索知识点")
