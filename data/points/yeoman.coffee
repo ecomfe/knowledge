@@ -2,7 +2,7 @@ id: "yeoman"
 title: "Yeoman"
 language: [ "javascript" ]
 function: [ "build-tools", "package-manager", "debug-tools" ]
-relevance: [ "edp", "bower", "grunt" ]
+relevance: [ "edp", "bower", "gruntjs" ]
 homepage: "http://yeoman.io/"
 github: "https://github.com/yeoman/yeoman"
 desc: """
