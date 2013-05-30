@@ -28,6 +28,7 @@ block content
                 a(href="/p/#{point.id}")= point.title
               +desc(point.desc)
               +links(point)
+        include inc/app-info
 
     curTagId = tag.id
     include inc/tag-list

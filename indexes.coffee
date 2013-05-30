@@ -7,19 +7,20 @@ indexes = {}
 
 # 初始化配置
 initSettings = ->
+  packageFile = fs.readFileSync("#{__dirname}/package.json").toString()
+  packageConf = JSON.parse packageFile
   indexes.app_name = "前端知识体系"
+  indexes.app_version = packageConf.version
 
 # 初始化知识点
 initPoints = ->
   pointPath = "#{__dirname}/data/points"
   indexes.points = getObjectByPath(pointPath)
 
-
 # 初始化标签
 initTags = ->
   tagPath = "#{__dirname}/data/tags"
   indexes.tags = getObjectByPath(tagPath)
-
 
 # 初始化类别
 initCategories = ->
@@ -29,8 +30,7 @@ initCategories = ->
     if !category.id then continue
     indexes.categories[category.id] = category
 
-
-# dependance: init
+# dependance: initCategories
 addCategoryTags = ->
   for categoryId, category of indexes.categories
     category.tags = []
@@ -52,13 +52,11 @@ addTagPoints = ->
             indexes.tags[pointTag].points = []
           indexes.tags[pointTag].points.push pointId
 
-
 getObjectCount = (obj) ->
   count = 0
   for key, value of obj
     count++
   count
-
 
 # 将多个.coffee文件中的Object合并为以Object.id为key的大Object
 getObjectByPath= (filePath) ->
@@ -92,7 +90,6 @@ initGuides = ->
         indexes.guides[docId] = marked(str)
       catch err
         console.log "文档解析出错：#{filename}"
-
 
 try
   console.log "为数据建立索引..."

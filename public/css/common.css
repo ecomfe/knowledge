@@ -70,6 +70,9 @@ header .app-search input:focus{-webkit-transition:background .3s;-moz-transition
 .container .main .content .point-tags .point-tag em{color:#929086}
 .container .main .content .point-tags .point-tag .point-tag-title{margin-right:1em}
 .container .main .article h1{padding-bottom:.5em;border-bottom:1px solid #eeedeb}
+.container .main .app-info{zoom:1;margin-top:40px;border-top:1px solid #eeedeb;color:#929086;font-size:12px}
+.container .main .app-info:before,.container .main .app-info:after{content:"";display:table}
+.container .main .app-info:after{clear:both}
 .container a.button{float:left;display:block;height:21px;line-height:21px;background:#0fb3bf;border-bottom:3px solid #0b96a0;color:#fff;-webkit-border-radius:5px;border-radius:5px;padding:2px 10px;cursor:pointer;}
 .container a.button:hover{color:#fff;opacity:.8;filter:alpha(opacity=80);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"}
 .container a.button:active{background:#0b96a0;opacity:1;-ms-filter:none;filter:none;border-bottom:none;line-height:24px;height:24px}

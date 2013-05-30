@@ -1,8 +1,11 @@
 @import "normalize.css"
+
+// web fonts
 @import url("http://fonts.googleapis.com/css?family=Merriweather:700,300");
 @import url("http://fonts.googleapis.com/css?family=Merriweather+Sans:700,400");
 @import url("http://fonts.googleapis.com/css?family=Source+Code+Pro");
 
+// colors
 cyan_light = #0FB3BF
 cyan_dark = #0B96A0
 orange_light = #EE7D5F
@@ -14,8 +17,10 @@ grey_thin1 = #CFCCC4
 grey_thin2 = #DCD9D4
 grey_thin3 = #EEEDEB
 
+// const
 aside_width = 210px
 
+// font family
 global_serif = Merriweather, serif
 global_sans = "Merriweather Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif
 global_mono = "Source Code Pro", "Monaco", "Courier New", monospace
@@ -238,6 +243,12 @@ header
       h1
         padding-bottom 0.5em
         border-bottom 1px solid grey_thin3
+    .app-info
+      clearfix()
+      margin-top 40px
+      border-top 1px solid grey_thin3
+      color grey_light
+      font-size 12px
 
   a.button
     float left
