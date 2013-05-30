@@ -16,3 +16,10 @@ mixin reference(reference)
         for refUrl, refTitle in reference
           li
             a(href=refUrl, target="_blank")= refTitle
+
+mixin app-menu-item(title, url, blank, icon)
+  li(class= title == active ? 'active' : null)
+    a(href=url, target=blank)
+      if icon
+        span(class='icon-' + icon)
+      = title

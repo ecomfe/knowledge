@@ -40,6 +40,7 @@ app.use stylus.middleware
   compile: compile
 app.use express.static(path.join(__dirname, 'public'))
 
+# add indexes
 app.locals indexes
 
 # development only
@@ -47,7 +48,7 @@ if 'development' == app.get('env')
   app.use express.errorHandler()
 
 # init routes
-require("#{__dirname}/routes/index.coffee")(app)
+require("#{__dirname}/routes/index")(app)
 
 http.createServer(app).listen app.get('port'), ->
   console.log 'Listening on port ' + app.get('port')
