@@ -17,6 +17,22 @@ mixin reference(reference)
           li
             a(href=refUrl, target="_blank")= refTitle
 
+mixin links(point)
+  if point.github || point.homepage
+    .links
+      if point.github
+        a.button(href=point.github, target="_blank")
+          span.icon-github-sign
+          | Github
+      if point.homepage
+        a.button(href=point.homepage, target="_blank")
+          span.icon-home
+          | 官网
+
+mixin desc(desc)
+  if desc
+    .desc!= marked(desc)
+
 mixin app-menu-item(title, url, blank, icon)
   li(class= title == active ? 'active' : null)
     a(href=url, target=blank)

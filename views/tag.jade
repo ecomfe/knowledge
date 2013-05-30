@@ -16,8 +16,7 @@ block content
           |  #{app_name} &gt; #{active} &gt; 按 “#{curCategory.title}” 查看
         .tag-info
           h1= tag.title
-          if tag.desc
-            .desc!= marked(tag.desc)
+          +desc(tag.desc)
           +level(tag.level)
           +reference(tag.reference)
         if tag.points
@@ -27,18 +26,8 @@ block content
             .point-info
               h2
                 a(href="/p/#{point.id}")= point.title
-              if point.desc
-                .desc!= marked(point.desc)
-              if point.github || point.homepage
-                .links
-                  if point.github
-                    a.button(href=point.github, target="_blank")
-                      span.icon-github-sign
-                      | Github
-                  if point.homepage
-                    a.button(href=point.homepage, target="_blank")
-                      span.icon-home
-                      | 官网
+              +desc(point.desc)
+              +links(point)
 
     curTagId = tag.id
     include inc/tag-list

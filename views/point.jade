@@ -14,19 +14,9 @@ block content
           |  #{app_name} &gt; Base &gt; 知识点 “#{point.title}”
         .point-info
           h1= point.title
-          if point.desc
-            .desc!= marked(point.desc)
+          +desc(point.desc)
           +level(point.level)
-          if point.github || point.homepage
-            .links
-              if point.github
-                a.button(href=point.github, target="_blank")
-                  span.icon-github-sign
-                  | Github
-              if point.homepage
-                a.button(href=point.homepage, target="_blank")
-                  span.icon-home
-                  | 官网
+          +links(point)
           +reference(point.reference)
         if point.relevance
           hr
