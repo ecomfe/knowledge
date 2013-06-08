@@ -32,6 +32,7 @@ header .app-search input:focus{-webkit-transition:background .3s;-moz-transition
 .container aside .group .group-list li span.count{padding-left:5px;font-size:12px;color:#929086;font-family:"Source Code Pro","Monaco","Courier New",monospace}
 .container aside .group .group-list li.active .tag-name{font-weight:700;color:#b76751}
 .container .main{float:right;text-align:center;overflow:auto;}
+.container .main h1,.container .main h2,.container .main h3,.container .main h4,.container .main h5,.container .main h6{margin:1em 0 .6em}
 .container .main h1,.container .main h2,.container .main h3{font-weight:300;font-family:Merriweather,serif}
 .container .main h1{font-size:30px}
 .container .main h2{font-size:24px}
