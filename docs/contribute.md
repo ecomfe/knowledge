@@ -26,6 +26,7 @@
 
 * [Firede](https://github.com/firede)
 * [Miller](https://github.com/miller)
+* [Bill Xiong](https://github.com/bilxio)
 
 ## 维护者
 
