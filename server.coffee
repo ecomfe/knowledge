@@ -27,7 +27,7 @@ marked.setOptions
 app.locals.marked = marked
 
 # all environments
-app.set 'port', process.env.PORT or 8888
+app.set 'port', process.env.PORT or process.env.APP_PORT or 8888
 app.set 'views', "#{__dirname}/views"
 app.set 'view engine', 'jade'
 app.use express.favicon("#{__dirname}/public/favicon.ico")
