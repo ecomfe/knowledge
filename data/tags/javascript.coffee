@@ -10,3 +10,4 @@ reference:
   "JavaScript 秘密花园": "http://bonsaiden.github.io/JavaScript-Garden/zh/"
   "JavaScript Patterns": "http://shichuan.github.io/javascript-patterns/"
   "ECOM JavaScript编码规范": "http://fe.baidu.com/doc/ecom/std/javascript-code-style.text"
+  "Superhero.js": "http://superherojs.com/"
