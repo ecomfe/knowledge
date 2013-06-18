@@ -1,6 +1,6 @@
 id: "960-grid-system"
 title: "960 Grid System"
-language: [ "css", "javascript", "html" ]
+language: [ "css" ]
 function: [ "layout-framework" ]
 theory: [ "grid-design", "responsive-layout" ]
 relevance: [ "bootstrap" ]
