@@ -1,4 +1,4 @@
-id: "zender"
+id: "zrender"
 title: "ZRender"
 function: [ "chart-library" ]
 language: [ "javascript" ]
