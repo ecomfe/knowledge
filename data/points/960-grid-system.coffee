@@ -2,7 +2,7 @@ id: "960-grid-system"
 title: "960 Grid System"
 language: [ "css" ]
 function: [ "layout-framework" ]
-theory: [ "grid-design", "responsive-layout" ]
+theory: [ "grid-design" ]
 relevance: [ "bootstrap" ]
 homepage: "http://960.gs/"
 github: "http://github.com/nathansmith/960-grid-system/"
