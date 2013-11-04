@@ -1,6 +1,6 @@
 id: "est"
 title: "est 基于LESS的样式工具库"
-language: [ "css" ]
+language: [ "css", "less" ]
 function: [ "layout-framework" ]
 relevance: [ "less", "archer" ]
 homepage: "http://ecomfe.github.io/est/"
