@@ -4,7 +4,7 @@ block meta
   title #{tag.title} - #{app_name}
 
 block content
-  active = 'Base'
+  - var active = 'Base'
   include inc/header
 
   - var curCategory = categories[tag.parent]
@@ -30,5 +30,5 @@ block content
               +links(point)
         include inc/app-info
 
-    curTagId = tag.id
+    -var curTagId = tag.id
     include inc/tag-list
