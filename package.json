@@ -18,8 +18,8 @@
     "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script"
   },
   "devDependencies": {
-    "mocha": "*",
-    "expect.js": "*"
+    "mocha": "~1.16.2",
+    "expect.js": "~0.2.0"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,9 @@
     "express": "3.2.0",
     "coffee-script": "1.6.2",
     "lodash": "1.2.1",
-    "marked": "*",
-    "jade": "*",
-    "stylus": "*",
-    "nib": "*"
+    "marked": "~0.3.0",
+    "jade": "~1.0.1",
+    "stylus": "~0.41.3",
+    "nib": "~1.0.1"
   }
 }
