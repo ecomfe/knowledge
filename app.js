@@ -1,2 +1,3 @@
-require('coffee-script');
-require('./server.coffee');
+require('coffeescript');
+require('coffeescript/register');
+require('./server');

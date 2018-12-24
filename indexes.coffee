@@ -1,6 +1,6 @@
 fs = require "fs"
 path = require "path"
-coffee = require "coffee-script"
+coffee = require "coffeescript"
 marked = require "marked"
 
 indexes = {}
@@ -67,9 +67,10 @@ getObjectByPath= (filePath) ->
       filename = "#{filePath}/#{file}"
       try
         str = fs.readFileSync(filename).toString()
-        obj = coffee.eval str, sandbox: true
+        obj = coffee.eval str, sandbox: {}
       catch err
         console.error "解析出错：#{filename}"
+        throw err
       if obj.id && obj.id == file.replace('.coffee', '')
         retObj[obj.id] = obj
       else

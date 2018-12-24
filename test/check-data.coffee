@@ -1,7 +1,7 @@
 expect = require "expect.js"
 path = require "path"
 fs = require "fs"
-coffee = require "coffee-script"
+coffee = require "coffeescript"
 
 describe 'Data Format Check', ->
   dataPath = "#{__dirname}/../data"
@@ -23,7 +23,7 @@ describe 'Data Format Check', ->
         filename = "#{filePath}/#{file}"
         it "#{flag}: #{filename}", ->
           str = fs.readFileSync(filename).toString()
-          obj = coffee.eval str, sandbox: true
+          obj = coffee.eval str, sandbox: {}
           expect(obj).to.be.a('object')
           expect(obj.id).to.be(file.replace('.coffee', ''))
 
